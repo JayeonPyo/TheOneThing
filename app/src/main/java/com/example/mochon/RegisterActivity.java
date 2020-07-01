@@ -9,7 +9,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,7 +25,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText user_name,user_id,user_pw, user_repw;
     private Spinner spinner;
     public String user_mbti;
-    private Button btn_signup;
+    //private Button btn_signup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,12 +37,12 @@ public class RegisterActivity extends AppCompatActivity {
         user_pw= findViewById(R.id.user_pw);
         user_repw = findViewById(R.id.user_repw);
 
-        btn_signup = findViewById(R.id.btn_signup);
+       // btn_signup = findViewById(R.id.btn_signup);
 
 
 
 
-        //Button btn_signup = (Button) findViewById(R.id.btn_signup);
+        Button btn_signup = (Button) findViewById(R.id.btn_signup);
         //final Spinner spinner = (Spinner) findViewById(R.id.spinner);
         spinner = findViewById(R.id.spinner);
 
@@ -63,6 +62,7 @@ public class RegisterActivity extends AppCompatActivity {
 
 
                 String spinner_item = spinner.getSelectedItem().toString();
+                System.out.println(spinner_item);
                 user_mbti = spinner_item;
 
             }
@@ -105,16 +105,18 @@ public class RegisterActivity extends AppCompatActivity {
         NetworkHelper.getInstance().register(user_name.getText().toString(), user_id.getText().toString(), user_pw.getText().toString()
                 , user_repw.getText().toString(),user_mbti).enqueue(new Callback<RegisterUserModel>() {
             @Override
-            public void onResponse(Call<RegisterUserModel> call, Response<RegisterUserModel> response) {
+            public void onResponse(Call<RegisterUserModel> call, Response<RegisterUserModel>    response) {
                 if (response.isSuccessful()) {
                     if (response.code() == 200) {
-                        Toast.makeText(RegisterActivity.this, "성공", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                        Toast.makeText(RegisterActivity.this, "성공", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                         startActivity(intent);
                     } else if (response.code() == 401) {
-                        Toast.makeText(RegisterActivity.this, "비밀번호이 다르거나 이미 회원 가입한 회원입니다.", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterActivity.this, "비밀번호이 다르거나 이미 회원 가입한 회원입니다.", Toast.LENGTH_LONG).show();
+
                     }
                 } else {
+                    System.out.println(""+response.code());
                     Toast.makeText(RegisterActivity.this, "서버 오류.", Toast.LENGTH_SHORT).show();
                 }
             }

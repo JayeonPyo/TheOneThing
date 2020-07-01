@@ -7,21 +7,15 @@
     tools:context=".RegisterActivity"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="43dp"
-        android:text="The one thing"
-        android:gravity="center"
-        android:layout_marginTop="60dp"
-        android:textColor="#26262B"/>
+
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="40dp"
         android:gravity="center"
         android:text="Sign up"
+        android:fontFamily="@font/nanumgothicbold"
         android:textColor="#555564"
         android:textSize="25dp" />
 
@@ -33,14 +27,21 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         >
         <EditText
             android:id="@+id/user_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="name"
+            android:hint="이름을 입력하세요"
             android:width="300dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="288dp"
+            android:layout_height="50dp"
+            android:paddingLeft="22dp"
+            android:background="@drawable/edit_box"
+            android:elevation="5dp"
+            android:fontFamily="@font/nanumgothic"
+
+            android:textSize="13sp"
 
 
             />
@@ -48,29 +49,48 @@
 
         <EditText
             android:id="@+id/user_id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="email"
             android:width="300dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="288dp"
+            android:layout_height="50dp"
+            android:paddingLeft="22dp"
+            android:background="@drawable/edit_box"
+            android:elevation="5dp"
+            android:fontFamily="@font/nanumgothic"
+            android:hint="이메일을 입력하세요"
+            android:textSize="13sp"
 
 
             />
 
         <EditText
-            android:layout_marginTop="30dp"
             android:id="@+id/user_pw"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="password"
+            android:layout_marginTop="20dp"
             android:width="300dp"
-            />
+            android:inputType="textPassword"
+            android:layout_width="288dp"
+            android:layout_height="50dp"
+            android:paddingLeft="22dp"
+            android:background="@drawable/edit_box"
+            android:elevation="5dp"
+            android:fontFamily="@font/nanumgothic"
+            android:hint="비밀번호를 입력하세요"
+            android:paddingBottom="10dp"
+            android:textSize="13sp"/>
         <EditText
-            android:layout_marginTop="5dp"
             android:id="@+id/user_repw"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="password 확인"
+            android:inputType="textPassword"
             android:width="300dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="288dp"
+            android:layout_height="50dp"
+            android:paddingLeft="22dp"
+            android:background="@drawable/edit_box"
+            android:elevation="5dp"
+            android:fontFamily="@font/nanumgothic"
+            android:hint="비밀번호를 다시 입력하세요"
+            android:textSize="13sp"
+            android:layout_marginBottom="5dp"
             />
 
     </LinearLayout>
@@ -93,8 +113,11 @@
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
             android:text="비밀번호는 영문 대소문자, 숫자, 특수기호(,!@#%)를 혼합하여 입력해주세요."
+            android:fontFamily="@font/nanumgothicbold"
             android:layout_weight="1"
+
             android:textSize="10dp"/>
 
 
@@ -117,6 +140,7 @@
             android:layout_height="40dp"
             android:background="@drawable/spinner_background"
             android:theme="@style/SpinnerTheme"
+            android:fontFamily="@font/nanumgothicbold"
             android:spinnerMode="dialog"/>
 
 
@@ -139,6 +163,7 @@
             android:layout_height="wrap_content"
             android:text="Sign up"
             android:width="300dp"
+            android:fontFamily="@font/nanumgothicbold"
             android:background="#55555C"
             android:textColor="#fff"
             />
