@@ -13,11 +13,11 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:background="#e0e0e0"
-        android:layout_marginTop="120dp"/>
+        android:layout_marginTop="115dp"/>
 
     <EditText
 
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="70dp"
         android:layout_width="288dp"
         android:layout_height="50dp"
         android:paddingLeft="22dp"
@@ -30,7 +30,7 @@
 
     <EditText
         android:id="@+id/login_pw"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="20dp"
         android:layout_width="288dp"
         android:layout_height="50dp"
         android:paddingLeft="22dp"
@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="7dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -75,7 +75,7 @@
         android:text="LOGIN"
         android:textColor="#FFF"
         android:textSize="15dp"
-        android:layout_marginTop="8dp"/>
+        android:layout_marginTop="25dp"/>
 
 
 </LinearLayout>

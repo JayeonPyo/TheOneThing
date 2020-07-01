@@ -20,7 +20,7 @@ public interface NetworkInterface {
 
     @FormUrlEncoded
     @POST("/login")
-    Call<String> login(@Field("email") String email,
+    Call<String>                  login(@Field("email") String email,
                                   @Field("password")String  password
     ) ;
 

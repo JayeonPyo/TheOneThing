@@ -23,7 +23,10 @@ public class SplashActivity extends AppCompatActivity {
 
     private class splashHandler implements Runnable{
         public void run(){
-            startActivity(new Intent(getApplication(), LoginActivity.class));
+//            startActivity(new Intent(getApplication(), LoginActivity.class));
+//            finish();
+            Intent intent = new Intent(SplashActivity.this,LoginActivity.class);
+            startActivity(intent);
             finish();
         }
     }

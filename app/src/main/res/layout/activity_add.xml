@@ -13,8 +13,8 @@
         android:layout_height="wrap_content"
         android:text="Add List"
         android:fontFamily="@font/nanumgothicbold"
-        android:textSize="32sp"
-        android:layout_marginTop="32dp"
+        android:textSize="30sp"
+        android:layout_marginTop="35dp"
         android:textColor="#000"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="@+id/add_title"/>
@@ -47,25 +47,26 @@
         android:id="@+id/importLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/add_des"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="12dp"
         android:paddingLeft="32dp"
-        android:paddingRight="32dp"
         android:paddingTop="16dp"
+        android:paddingRight="32dp"
         android:paddingBottom="16dp"
-        android:layout_marginTop="16dp">
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_des">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="중요도"
             android:fontFamily="@font/nanumgothic"
-            android:textSize="18sp"
+            android:text="중요도"
             android:textColor="#000"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <RatingBar
             android:id="@+id/rating_import"
@@ -74,10 +75,10 @@
             android:numStars="5"
             android:rating="4.5"
             android:stepSize="0.5"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:theme="@style/RatingBar"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:theme="@style/RatingBar"/>
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -98,7 +99,7 @@
             android:layout_height="wrap_content"
             android:text="시간"
             android:fontFamily="@font/nanumgothic"
-            android:textSize="18sp"
+            android:textSize="15sp"
             android:textColor="#000"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -134,7 +135,7 @@
             android:layout_height="wrap_content"
             android:text="성공률"
             android:fontFamily="@font/nanumgothic"
-            android:textSize="18sp"
+            android:textSize="15sp"
             android:textColor="#000"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"

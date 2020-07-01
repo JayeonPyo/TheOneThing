@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:gravity="center"
-        android:text="Sign up"
+        android:text="Sign Up"
         android:fontFamily="@font/nanumgothicbold"
         android:textColor="#555564"
         android:textSize="25dp" />
@@ -113,7 +113,7 @@
 
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
             android:text="비밀번호는 영문 대소문자, 숫자, 특수기호(,!@#%)를 혼합하여 입력해주세요."
             android:fontFamily="@font/nanumgothicbold"
             android:layout_weight="1"
@@ -131,7 +131,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         >
 
         <Spinner
